@@ -517,9 +517,9 @@ function NeonConfiguratorApp() {
           {/* 1. Großer Hintergrundbereich (Produktvorschau) - Volle Breite */}
           <div className="mb-8 -mx-4 sm:-mx-6 lg:-mx-8 -mt-6 md:-mt-12">
             {/* Großes Mockup-Bild - Volle Breite */}
-            <div className="relative h-96 pt-20 flex items-center justify-center w-full bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/ab_20cm copy.webp)'}}>
+            <div className="relative h-96 pt-20 flex items-center justify-center w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
               {/* Dark overlay for better contrast */}
-              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-20"></div>
               <img
                 src={config.selectedDesign.mockupUrl}
                 alt={config.selectedDesign.name}
