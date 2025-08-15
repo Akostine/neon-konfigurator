@@ -517,7 +517,7 @@ function NeonConfiguratorApp() {
           {/* 1. Großer Hintergrundbereich (Produktvorschau) - Volle Breite */}
           <div className="mb-8 -mx-4 sm:-mx-6 lg:-mx-8 -mt-6 md:-mt-12">
             {/* Großes Mockup-Bild - Volle Breite */}
-            <div className="relative h-96 pt-20 flex items-center justify-center w-full bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)'}}>
+            <div className="relative h-96 pt-20 flex items-center justify-center w-full bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/ab_20cm copy.webp)'}}>
               {/* Dark overlay for better contrast */}
               <div className="absolute inset-0 bg-black bg-opacity-40"></div>
               <img
