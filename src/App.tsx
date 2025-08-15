@@ -517,11 +517,13 @@ function NeonConfiguratorApp() {
           {/* 1. Großer Hintergrundbereich (Produktvorschau) - Volle Breite */}
           <div className="mb-8 -mx-4 sm:-mx-6 lg:-mx-8 -mt-6 md:-mt-12">
             {/* Großes Mockup-Bild - Volle Breite */}
-            <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 h-96 pt-20 flex items-center justify-center w-full">
+            <div className="relative h-96 pt-20 flex items-center justify-center w-full bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)'}}>
+              {/* Dark overlay for better contrast */}
+              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
               <img
                 src={config.selectedDesign.mockupUrl}
                 alt={config.selectedDesign.name}
-                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl relative z-10"
               />
               
               <button
@@ -530,7 +532,7 @@ function NeonConfiguratorApp() {
                   const prevIndex = currentIndex > 0 ? currentIndex - 1 : availableDesigns.length - 1;
                   handleDesignChange(availableDesigns[prevIndex]);
                 }}
-                className="absolute left-6 top-1/2 transform -translate-y-1/2 transition-all duration-300"
+                className="absolute left-6 top-1/2 transform -translate-y-1/2 transition-all duration-300 z-20"
               >
                 <ChevronLeft className="h-12 w-6 text-white drop-shadow-lg" />
               </button>
@@ -541,13 +543,13 @@ function NeonConfiguratorApp() {
                   const nextIndex = currentIndex < availableDesigns.length - 1 ? currentIndex + 1 : 0;
                   handleDesignChange(availableDesigns[nextIndex]);
                 }}
-                className="absolute right-6 top-1/2 transform -translate-y-1/2 transition-all duration-300"
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 transition-all duration-300 z-20"
               >
                 <ChevronRight className="h-12 w-6 text-white drop-shadow-lg" />
               </button>
               
               {/* Design Indicators */}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
                 {availableDesigns.map((_, index) => (
                   <button
                     key={index}
