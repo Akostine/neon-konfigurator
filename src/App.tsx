@@ -517,13 +517,16 @@ function NeonConfiguratorApp() {
           {/* 1. Großer Hintergrundbereich (Produktvorschau) - Volle Breite */}
           <div className="mb-8 -mx-4 sm:-mx-6 lg:-mx-8 -mt-6 md:-mt-12">
             {/* Großes Mockup-Bild - Volle Breite */}
-            <div className="relative h-96 pt-20 flex items-center justify-center w-full bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)'}}>
+            <div className="relative h-96 pt-20 flex items-center justify-center w-full bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.pexels.com/photos/2681319/pexels-photo-2681319.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)'}}>
               {/* Dark overlay for better contrast */}
-              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
               <img
                 src={config.selectedDesign.mockupUrl}
                 alt={config.selectedDesign.name}
                 className="max-w-full max-h-full object-contain rounded-lg shadow-2xl relative z-10"
+                style={{
+                  filter: 'drop-shadow(0 0 30px rgba(236, 72, 153, 0.8))',
+                }}
               />
               
               <button
